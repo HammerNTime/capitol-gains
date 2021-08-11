@@ -10,6 +10,7 @@ import SenatorDetails from "../SenatorDetails/SenatorDetails"
 import RepresentativeDetails from "../RepresentativeDetails/RepresentativeDetails"
 import StockByRep from "../StockByRep/StockByRep"
 import StockBySenator from "../StockBySenator/StockBySenator"
+import ProtectedRoute from "../../components/Misc/ProtectedRoute"
 import StockDetails from "../StockDetails/StockDetails"
 import NavBar from "../../components/NavBar/NavBar"
 import SignUp from "../Signup/Signup"
@@ -232,12 +233,10 @@ const App = () => {
 								setCurrentSenatorTransactions={setCurrentSenatorTransactions}
 							/>
 						</Route>
-						<Route exact path={`/myProfile/:myProfile`}>
-							{user ? (
-								<MyProfile currentUser={user} />
-							) : (
-								<Redirect to="/login" />
-							)}
+						<Route exact path="/myProfile/:myProfile">
+							<ProtectedRoute authenticated={authenticated} exact path="/myProfile/:myProfile">
+									<MyProfile currentUser={user} />
+							</ProtectedRoute>
 						</Route>
 						<Route exact path="/stocks/:ticker">
 							<StockDetails
