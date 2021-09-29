@@ -1,4 +1,4 @@
-# Capitol Gain
+# Capitol Gains
 
 ![Logo Below](https://i.imgur.com/LHDKP2e.jpg)
 
@@ -21,6 +21,7 @@ Capitol Gains allows you to see the publicly released disclosures that have been
 This is the Unit 3 group project that is a culmination of all the skills we have learned since the beginning of the bootcamp.
 
 This application uses the following technologoy:
+* React
 * HTML
 * CSS
 * JavaScript
@@ -30,6 +31,11 @@ This application uses the following technologoy:
 * JWT
 * Git
 * GitHub
+
+## Screenshots
+|![Home Page](https://i.imgur.com/alJZIme.png) | ![Reps/Senators Page](https://i.imgur.com/ZvIy809.png)|
+|![Senator/Rep Portfolio Page](https://i.imgur.com/GByxvh7.png) | ![Individual Stock Graph](https://i.imgur.com/zXLVhuu.png) |
+|![Stock Page](https://i.imgur.com/DJQ12zK.png) | ![Sign Up Page](https://i.imgur.com/aWLNNk8.png) |
 
 # Project Roles
 Dylan Hammer - Git Commander and The Don of API
