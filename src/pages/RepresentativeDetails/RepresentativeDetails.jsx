@@ -16,18 +16,18 @@ const RepresentativeDetails = (props) => {
 			image: props.currentRepresentative[0].image,
 		})
 	}
-	function getOwnership() {
-		getUserSenators().then((data) => {
-			let ownership = false
-			data.reps.forEach((rep) => {
-				if (rep.name === props.match.params.representativeName) {
-					ownership = true
-				}
-			})
-			setOwns(ownership)
-			props.updateUser()
-		})
-	}
+	// function getOwnership() {
+	// 	getUserSenators().then((data) => {
+	// 		let ownership = false
+	// 		data.reps.forEach((rep) => {
+	// 			if (rep.name === props.match.params.representativeName) {
+	// 				ownership = true
+	// 			}
+	// 		})
+	// 		setOwns(ownership)
+	// 		props.updateUser()
+	// 	})
+	// }
 
 	function compareDates(a, b) {
 		if (b.transaction_date < a.transaction_date) {
@@ -65,7 +65,7 @@ const RepresentativeDetails = (props) => {
 		if (allRepresentativesTransactions) {
 			allRepresentativesTransactions.sort(compareDates)
 			props.setCurrentRepresentativeTransactions(allRepresentativesTransactions)
-			getOwnership()
+			// getOwnership()
 		}
 	}
 	useEffect(() => {
@@ -101,9 +101,9 @@ const RepresentativeDetails = (props) => {
             className="watchList-button"
             onClick={() => {
               addRep();
-              setTimeout(() => {
-                getOwnership();
-              }, 300);
+              // setTimeout(() => {
+              //   getOwnership();
+              // }, 300);
             }}
           >
             Add To WatchList

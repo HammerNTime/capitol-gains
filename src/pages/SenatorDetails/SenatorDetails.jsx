@@ -9,18 +9,18 @@ import "./SenatorDetails.css"
 const SenatorDetails = (props) => {
 	const [owns, setOwns] = useState(false)
 
-	function getOwnership() {
-		getUserSenators().then((data) => {
-			let ownership = false
-			data.senators.forEach((sen) => {
-				if (sen.name === props.match.params.senatorName) {
-					console.log(props.match.params.senatorName)
-					ownership = true
-				}
-			})
-			setOwns(ownership)
-		})
-	}
+	// function getOwnership() {
+	// 	getUserSenators().then((data) => {
+	// 		let ownership = false
+	// 		data.senators.forEach((sen) => {
+	// 			if (sen.name === props.match.params.senatorName) {
+	// 				console.log(props.match.params.senatorName)
+	// 				ownership = true
+	// 			}
+	// 		})
+	// 		setOwns(ownership)
+	// 	})
+	// }
 
 	function compareDates(a, b) {
 		if (b.transaction_date < a.transaction_date) {
@@ -59,7 +59,7 @@ const SenatorDetails = (props) => {
 		if (allSenatorsTransactions) {
 			allSenatorsTransactions.sort(compareDates)
 			props.setCurrentSenatorTransactions(allSenatorsTransactions)
-			getOwnership()
+			// getOwnership()
 		}
 	}
 	useEffect(() => {
@@ -98,9 +98,9 @@ const SenatorDetails = (props) => {
                 state: props.currentSenator[0].state,
                 image: props.currentSenator[0].image,
               });
-              setTimeout(() => {
-                getOwnership();
-              }, 1000);
+              // setTimeout(() => {
+              //   getOwnership();
+              // }, 1000);
             }}
           >
             Add To WatchList
